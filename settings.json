@@ -4,7 +4,7 @@
     "template_folder": "templates",
     "static_folder": "static"
   },
-  "name": "Plugin 2",
-  "pages": {"Plugin 2": {"Form": "/plugin2/form"}},
-  "url_prefix": "/plugin2"
+  "name": "Plugin Template",
+  "pages": {"Plugin 2": {"Form": "/template/form"}},
+  "url_prefix": "/template"
 }
