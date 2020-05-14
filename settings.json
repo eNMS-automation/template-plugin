@@ -6,5 +6,14 @@
   },
   "name": "Plugin Template",
   "pages": {"Plugin 2": {"Form": "/template/form"}},
+  "rbac": {
+    "get_requests": [
+      "/template/form"
+    ],
+    "post_requests": [
+      "/form/panel",
+      "/process_form_data"
+    ]
+  },
   "url_prefix": "/template"
 }
