@@ -19,4 +19,4 @@ class Plugin:
     def register_endpoints(self, controller):
         @controller.register_endpoint
         def process_form_data(**data):
-            return int(data.get("router_id", 10)) * 2
+            return int(data["router_id"] or 0) * 2
