@@ -3,7 +3,7 @@ from .forms import Form
 
 
 class Plugin:
-    def __init__(self, server, controller, **kwargs):
+    def __init__(self, server, controller, db, **kwargs):
         self.register_routes(server, **kwargs)
         self.register_endpoints(controller)
 
