@@ -4,8 +4,8 @@ from .forms import Form
 
 class Plugin:
     def __init__(self, server, controller, **kwargs):
-        self.register_routes()
-        self.register_endpoints()
+        self.register_routes(server, **kwargs)
+        self.register_endpoints(controller)
 
     def register_routes(self, server, **kwargs):
         blueprint = Blueprint(f"{__name__}_bp", __name__, **kwargs["blueprint"])
