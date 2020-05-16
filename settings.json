@@ -4,7 +4,7 @@
     "template_folder": "templates",
     "static_folder": "static"
   },
-  "name": "Plugin Template",
+  "name": "Template Plugin",
   "pages": {"Template": {"Form": "/template/form"}},
   "rbac": {
     "get_requests": [
