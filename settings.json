@@ -1,11 +1,11 @@
 {
   "active": true,
-  "blueprint_settings": {
+  "blueprint": {
     "template_folder": "templates",
     "static_folder": "static"
   },
   "name": "Plugin Template",
-  "pages": {"Plugin 2": {"Form": "/template/form"}},
+  "pages": {"Template": {"Form": "/template/form"}},
   "rbac": {
     "get_requests": [
       "/template/form"
