@@ -2,6 +2,7 @@ from eNMS.forms import BaseForm
 from eNMS.forms.fields import (
     BooleanField,
     HiddenField,
+    InstanceField,
     IntegerField,
     MultipleInstanceField,
     PasswordField,
@@ -16,9 +17,9 @@ class Form(BaseForm):
     connected_links = MultipleInstanceField("Links", model="link")
     hostname = StringField("Username", default="admin")
     ip_address = StringField("IP address")
-    neighbors = MultipleInstanceField("Devices", model="device")
+    neighbor = InstanceField("Devices", model="device")
+    ports = MultipleInstanceField("Port", model="port")
     password = PasswordField("Password")
-    router_id = IntegerField("Router ID")
     carry_customer_traffic = BooleanField("Carry Customer Traffic", default=False)
 
 

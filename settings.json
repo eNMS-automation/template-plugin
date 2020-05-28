@@ -5,15 +5,10 @@
     "static_folder": "static"
   },
   "name": "Template Plugin",
-  "pages": {"Template": {"Form": "/template/form"}},
+  "pages": { "Template": { "Form": "/template/form" } },
   "rbac": {
-    "get_requests": [
-      "/template/form"
-    ],
-    "post_requests": [
-      "/form/panel",
-      "/process_form_data"
-    ]
+    "get_requests": ["/template/form"],
+    "post_requests": ["/form/panel", "/process_form_data"]
   },
   "url_prefix": "/template"
 }

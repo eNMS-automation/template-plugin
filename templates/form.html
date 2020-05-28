@@ -63,8 +63,5 @@
   </fieldset>
 </div>
 {% endblock content %} {% block javascripts %} {{ super()}}
-<script
-  type="module"
-  src="{{ url_for('.static', filename='js/custom.js') }}"
-></script>
+<script type="module" src="{{ url_for('.static', filename='js/custom.js') }}"></script>
 {% endblock javascripts %}
