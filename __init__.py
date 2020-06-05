@@ -1,9 +1,6 @@
 from flask import request, render_template, Blueprint
-from sqlalchemy.orm import configure_mappers
 from .forms import Form
-from .models import Port
-
-from eNMS.models import models as eNMS_models
+from .models import Port  # noqa: F401
 
 
 class Plugin:
