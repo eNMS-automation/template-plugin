@@ -7,7 +7,6 @@ import {
 } from "/static/js/base.js";
 
 function autofillForm() {
-  $("#custom-router_id").val(36);
   $("#custom-ip_address").val("192.168.155.1");
   $("#custom-carry_customer_traffic").prop("checked", true);
   notify("Values filled programatically in JavaScript.", "success", 5);
@@ -22,8 +21,8 @@ function submitForm() {
   call({
     url: "/process_form_data",
     form: "custom-form",
-    callback: function (routerId) {
-      $("#custom-router_id").val(routerId);
+    callback: function (ipAddress) {
+      $("#custom-ip_address").val(ipAddress);
       notify("Form successfully submitted.", "success", 5, true);
     },
   });

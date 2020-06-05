@@ -15,6 +15,7 @@ class Plugin:
         blueprint = Blueprint(f"{__name__}_bp", __name__, **kwargs["blueprint"])
 
         @blueprint.route("/form")
+        @server.monitor_requests
         def plugin():
             return render_template("/form.html", form=Form(request.form))
 
@@ -23,4 +24,4 @@ class Plugin:
     def register_endpoints(self, controller):
         @controller.register_endpoint
         def process_form_data(**data):
-            return int(data["router_id"] or 0) * 2
+            return "127.0.0.1"
