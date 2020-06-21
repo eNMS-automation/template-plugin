@@ -5,7 +5,12 @@
     "static_folder": "static"
   },
   "name": "Template Plugin",
-  "pages": { "Template": { "Form": "/template/form" } },
+  "menu": {
+    "Template": {
+      "icon": "shield",
+      "pages": { "Page": { "Form": "/template/form" } }
+    }
+  },
   "rbac": {
     "get_requests": ["/template/form"],
     "post_requests": ["/form/panel", "/process_form_data"]
