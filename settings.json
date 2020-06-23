@@ -12,7 +12,7 @@
     }
   },
   "rbac": {
-    "get_requests": ["/template/form", "/devices"],
+    "get_requests": ["/template/form", "/template/devices"],
     "post_requests": ["/form/panel", "/process_form_data"]
   },
   "url_prefix": "/template"

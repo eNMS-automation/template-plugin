@@ -16,7 +16,7 @@ class Plugin:
         def form():
             return render_template("/form.html", form=Form(request.form))
 
-        @blueprint.route("/")
+        @blueprint.route("/devices")
         @server.monitor_requests
         def devices():
             return render_template("/devices.html")
