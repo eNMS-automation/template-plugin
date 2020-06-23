@@ -8,7 +8,10 @@
   "menu": {
     "Template": {
       "icon": "shield",
-      "pages": { "Page": { "Form": "/template/form" }, "Devices": "/devices" }
+      "pages": {
+        "Page": { "Subpage": "/template/form" },
+        "Devices": "/template/devices"
+      }
     }
   },
   "rbac": {
