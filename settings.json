@@ -8,11 +8,11 @@
   "menu": {
     "Template": {
       "icon": "shield",
-      "pages": { "Page": { "Form": "/template/form" } }
+      "pages": { "Page": { "Form": "/template/form" }, "Devices": "/devices" }
     }
   },
   "rbac": {
-    "get_requests": ["/template/form"],
+    "get_requests": ["/template/form", "/devices"],
     "post_requests": ["/form/panel", "/process_form_data"]
   },
   "url_prefix": "/template"

@@ -13,8 +13,13 @@ class Plugin:
 
         @blueprint.route("/form")
         @server.monitor_requests
-        def plugin():
+        def form():
             return render_template("/form.html", form=Form(request.form))
+
+        @blueprint.route("/")
+        @server.monitor_requests
+        def devices():
+            return render_template("/devices.html")
 
         server.register_blueprint(blueprint, url_prefix=kwargs["url_prefix"])
 
