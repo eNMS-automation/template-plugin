@@ -5,18 +5,22 @@
     "static_folder": "static"
   },
   "name": "Template Plugin",
-  "menu": {
-    "Template": {
-      "icon": "shield",
-      "pages": {
-        "Page": { "Subpage": "/template/form" },
-        "Devices": "/template/devices"
-      }
-    }
-  },
   "rbac": {
     "get_requests": ["/template/form", "/template/devices"],
+    "menu": {
+      "Template": {
+        "icon": "shield",
+        "pages": {
+          "Page": { "Subpage": "/template/form" },
+          "Devices": "/template/devices"
+        }
+      }
+    },
+    "pages": ["Page", "Subpage"],
     "post_requests": ["/form/panel", "/process_form_data"]
+  },
+  "database": {
+    "import_export_models": ["port"]
   },
   "url_prefix": "/template"
 }
