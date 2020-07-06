@@ -26,5 +26,5 @@ class Form(BaseForm):
 class PanelForm(BaseForm):
     form_type = HiddenField(default="panel")
     action = "eNMS.plugins.submitPanelForm"
-    ip_address = StringField("IP address")
+    ip_address = StringField("IP address", render_kw={"help": "custom/impacting"})
     router_id = IntegerField("Router ID")
