@@ -21,11 +21,6 @@ class Plugin:
         def devices():
             return render_template("/devices.html")
 
-        @blueprint.route("/help/<path:path>")
-        @server.monitor_requests
-        def help(path):
-            return render_template(f"help/{path}.html")
-
         server.register_blueprint(blueprint, url_prefix=kwargs["url_prefix"])
 
     def register_endpoints(self, controller):
