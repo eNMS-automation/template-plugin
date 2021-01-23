@@ -6,10 +6,15 @@
   },
   "name": "Template Plugin",
   "rbac": {
-    "get_requests": ["/form/panel", "/template/form", "/template/devices"],
+    "get_requests": {
+      "/form/panel": "access",
+      "/template/form": "access",
+      "/template/devices": "access"
+    },
     "menu": {
       "Template": {
         "icon": "shield",
+        "rbac": "access",
         "pages": {
           "Page": { "Subpage": "/template/form" },
           "Devices": "/template/devices"
@@ -17,7 +22,9 @@
       }
     },
     "pages": ["Page", "Subpage"],
-    "post_requests": ["/process_form_data"]
+    "post_requests": {
+      "/process_form_data": "access"
+    }
   },
   "database": {
     "import_export_models": ["port"]
