@@ -16,12 +16,17 @@
         "icon": "shield",
         "rbac": "access",
         "pages": {
-          "Page": { "Subpage": "/template/form" },
-          "Devices": "/template/devices"
+          "Page": {
+            "endpoint": "/template/form",
+            "rbac": "access"
+          },
+          "Devices": {
+            "endpoint": "/template/devices",
+            "rbac": "access"
+          }
         }
       }
     },
-    "pages": ["Page", "Subpage"],
     "post_requests": {
       "/process_form_data": "access"
     }
