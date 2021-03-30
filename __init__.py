@@ -12,12 +12,12 @@ class Plugin:
         blueprint = Blueprint(f"{__name__}_bp", __name__, **kwargs["blueprint"])
 
         @blueprint.route("/template_form")
-        @server.process_requests
+        @server.monitor_requests
         def form():
             return render_template("/form.html", form=Form(request.form))
 
         @blueprint.route("/template_devices")
-        @server.process_requests
+        @server.monitor_requests
         def devices():
             return render_template("/devices.html")
 
