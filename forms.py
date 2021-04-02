@@ -1,5 +1,5 @@
 from eNMS.forms import BaseForm
-from eNMS.forms.fields import (
+from eNMS.fields import (
     BooleanField,
     HiddenField,
     InstanceField,
