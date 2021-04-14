@@ -4,7 +4,7 @@ from .models import Port  # noqa: F401
 
 
 class Plugin:
-    def __init__(self, server, controller, db, **kwargs):
+    def __init__(self, server, controller, db, vs, env, **kwargs):
         self.register_routes(server, **kwargs)
         self._register_endpoints(controller)
 
