@@ -9,7 +9,7 @@ class Plugin:
         self._register_endpoints(controller)
 
     def register_routes(self, server, **kwargs):
-        blueprint = Blueprint(f"{__name__}_bp", __name__, **kwargs["blueprint"])
+        blueprint = Blueprint(kwargs["name"], __name__, **kwargs["blueprint"])
 
         @blueprint.route("/template_form")
         @server.process_requests
