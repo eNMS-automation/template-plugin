@@ -4,7 +4,6 @@
   href="{{ url_for('static', filename='lib/datatables/dataTables.bootstrap.min.css') }}"
   rel="stylesheet"
 />
-<link href="{{ url_for('static', filename='css/table.css') }}" rel="stylesheet" />
 {% endblock stylesheets %} {% block content %}
 <form id="search-form-device">
   <div id="tooltip-overlay" class="overlay"></div>
@@ -22,5 +21,8 @@
   ></table>
 </form>
 {% endblock content %} {% block javascripts %} {{ super()}}
-<script type="module" src="{{ url_for('.static', filename='js/devices.js') }}"></script>
+<script
+  type="module"
+  src="{{ url_for('.static', filename='js/devices.js'.format(version_path)) }}"
+></script>
 {% endblock javascripts %}

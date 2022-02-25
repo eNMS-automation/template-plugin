@@ -1,4 +1,4 @@
-import { tables } from "/static/js/table.js";
+import { tables } from "/static/js/version/table.js";
 
 $(document).ready(function () {
   // eslint-disable-next-line new-cap

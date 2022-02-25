@@ -4,7 +4,7 @@ import {
   configureNamespace,
   notify,
   openPanel,
-} from "/static/js/base.js";
+} from "/static/js/version/base.js";
 
 function autofillForm() {
   $("#custom-ip_address").val("192.168.155.1");
