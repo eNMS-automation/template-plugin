@@ -23,6 +23,6 @@
 {% endblock content %} {% block javascripts %} {{ super()}}
 <script
   type="module"
-  src="{{ url_for('.static', filename='js/devices.js'.format(version_path)) }}"
+  src="{{ url_for('.static', filename='js/devices.js') }}"
 ></script>
 {% endblock javascripts %}
